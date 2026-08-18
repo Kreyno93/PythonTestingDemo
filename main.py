@@ -18,6 +18,11 @@ def divide(x, y):
         raise ValueError("Cannot divide by zero.")
     return x / y
 
+def modulo(x, y):
+    if y == 0:
+        raise ValueError("Cannot perform modulo by zero.")
+    return x % y
+
 
 def main():
     print("Select operation:")
@@ -25,8 +30,9 @@ def main():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
+    print("5. Modulo")
 
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
@@ -39,6 +45,8 @@ def main():
         print(f"{num1} * {num2} = {multiply(num1, num2)}")
     elif choice == "4":
         print(f"{num1} / {num2} = {divide(num1, num2)}")
+    elif choice == "5":
+        print(f"{num1} % {num2} = {modulo(num1, num2)}")
     else:
         print("Invalid input")
 

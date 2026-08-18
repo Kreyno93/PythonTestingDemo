@@ -72,3 +72,18 @@ class TestDivide:
 
     def test_divide_result_float(self):
         assert divide(7, 2) == 3.5
+
+    
+class TestModulo:
+    def test_modulo_positive_numbers(self):
+        assert modulo(5, 3) == 2
+
+    def test_modulo_negative_numbers(self):
+        assert modulo(-5, -3) == -2
+
+    def test_modulo_mixed_numbers(self):
+        assert modulo(-5, 3) == 1
+
+    def test_modulo_by_zero_raises_error(self):
+        with pytest.raises(ValueError, match="Cannot perform modulo by zero."):
+            modulo(5, 0)
