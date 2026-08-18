@@ -1,5 +1,5 @@
 import pytest
-from main import add, subtract, multiply, divide
+from main import add, subtract, multiply, divide, modulo
 
 # test files are named
 # test_*.py
